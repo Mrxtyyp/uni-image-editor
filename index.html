@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+    <link type="text/css" href="https://uicdn.toast.com/tui-color-picker/v2.2.6/tui-color-picker.css"
+        rel="stylesheet" />
+    <link type="text/css" href="css/tui-image-editor.css" rel="stylesheet" />
+    <style>
+        html,
+        body {
+            height: 100%;
+            box-sizing: border-box;
+            margin: 0;
+            background-color: #282828;
+        }
+
+        .tui-image-editor-container {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            min-height: 300px;
+            height: 90% !important;
+            position: relative;
+            background-color: #282828;
+            overflow: hidden;
+            letter-spacing: .3px;
+        }
+
+        .tui-image-editor-container .tui-image-editor-help-menu.top {
+            white-space: nowrap;
+            width: 206px;
+            height: 40px;
+            position: fixed;
+            bottom: 20px;
+            left: 60px;
+            top: auto;
+            z-index: 99;
+            transform: translateX(-50%);
+        }
+
+        .tui-image-editor-container .tui-image-editor-header {
+            display: none;
+        }
+
+        .tui-image-editor-container .tui-image-editor-controls {
+            position: absolute;
+            background-color: #151515;
+            width: 100%;
+            height: 64px;
+            display: table;
+            bottom: 0;
+            z-index: 2;
+        }
+
+        .tie-btn-zoomIn,
+        .tie-btn-zoomOut,
+        .tie-btn-hand,
+        .tie-btn-history,
+        .tie-btn-redo,
+        .tie-btn-delete,
+        .tie-btn-deleteAll {
+            display: none !important;
+        }
+
+        .btn {
+            visibility: hidden;
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            height: 10vh;
+            margin-right: 20px;
+        }
+
+        .cancelReturn {
+            color: #fff;
+            margin-right: 20px;
+        }
+
+        .saveBtn {
+            height: 30px;
+            border-radius: 15px;
+            background-color: #00a9ff;
+            color: #fff;
+            line-height: 30px;
+            text-align: center;
+            font-weight: 500;
+            padding: 0 15px;
+        }
+    </style>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/fabric.js/4.4.0/fabric.js"></script>
+    <script type="text/javascript" src="https://uicdn.toast.com/tui.code-snippet/v1.5.0/tui-code-snippet.min.js">
+    </script>
+    <script type="text/javascript" src="https://uicdn.toast.com/tui-color-picker/v2.2.6/tui-color-picker.js">
+    </script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/1.3.3/FileSaver.min.js">
+    </script>
+
+    <script type="text/javascript" src="js/tui-image-editor.js"></script>
+    <script type="text/javascript" src="js/theme/black-theme.js"></script>
+</head>
+
+<body>
+    <div id="tui-image-editor-container"></div>
+    <div class="btn">
+        <div class="cancelReturn">取消</div>
+        <div class="saveBtn">保存</div>
+    </div>
+</body>
+<script src="js/main.js"></script>
+
+</html>
+<script src="js/uni.webview.1.5.2.js"></script>
